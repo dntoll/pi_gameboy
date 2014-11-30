@@ -34,6 +34,8 @@ int main()
 		int vy = map(y, 0, 1024, 320, 0);
 		
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
+
+		cout << x << " : " << y << "\n";
 	}
 	
 	

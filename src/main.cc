@@ -47,8 +47,16 @@ int main()
 
 		cout << x << " : " << y << "\n";
 	} while (b < 1000);
+
 	lcd.clearScreen();
 	
+	for (int i = 0; i< 1024; i++) {
+		if (xvalues[i]) {
+			int vx = map(i, 0, 1024, 230, 10);
+			lcd.fillBox(vx, 120, 1, 1, 255, 255, 255);
+		}
+		
+	}
 	
 	return 0;
 }

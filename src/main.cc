@@ -32,20 +32,31 @@ int main()
 
 	lcd.fillBox(230, 310, 10, 10, rand()%255, rand()%255, rand()%255);
 	int b;
+	
 	do {
+		bool foundNewValues = false;
 		int x = inst.readValue(1);
 		int y = inst.readValue(0);
 		b = inst.readValue(2);
-
-		xvalues[x] = true;
-		yvalues[y] = true;
+		
+		if (xvalues[x] == false) {
+			xvalues[x] = true;
+			foundNewValues = true;
+		}
+		if (yvalues[y] == false) {
+			yvalues[y] = true;
+			foundNewValues = true;
+		}
 
 		int vx = map(x, 0, 1024, 230, 10);
 		int vy = map(y, 0, 1024, 310, 10);
 		
-		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
+		
 
-		cout << x << " : " << y << " : " << b <<"\n";
+		if (foundNewValues) {
+			lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
+			cout << x << " : " << y << " : " << b <<"\n";
+		}
 	} while (b > 500);
 
 	lcd.clearScreen();

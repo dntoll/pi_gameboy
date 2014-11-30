@@ -15,7 +15,7 @@ int main()
 
 	mcp3008 inst;
 
-	lcd.fillBox(310, 230, 10, 10, rand()%255, rand()%255, rand()%255);
+	lcd.fillBox(240, 320, 10, 10, rand()%255, rand()%255, rand()%255);
 	
 	while(true) {
 		int x = 1024-inst.readValue(1);

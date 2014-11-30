@@ -76,14 +76,14 @@ int main()
 		//lcd.clearScreen();
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 		
-		if (b < 500) {
-			lcd.clearScreen();
-		}
-		
-	} while (true);
+	} while (b > 500);
 
 	lcd.clearScreen();
 	
+	FILE * pFile;
+	pFile = fopen ("joystick.bin", "wb");
+	fwrite (values , sizeof(bool), sizeof(values), pFile);
+	fclose (pFile);
 	
 	return 0;
 }

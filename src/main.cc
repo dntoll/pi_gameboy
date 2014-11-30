@@ -76,7 +76,7 @@ int main()
 		//lcd.clearScreen();
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 		
-		if (b > 500) {
+		if (b < 500) {
 			lcd.clearScreen();
 		}
 		

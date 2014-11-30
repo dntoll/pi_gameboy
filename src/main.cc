@@ -21,7 +21,6 @@ int main()
 		int x = inst.readValue(0);
 		int y = inst.readValue(1);
 		lcd.fillBox(x/4, y/4, 50, 50, rand()%255, rand()%255, rand()%255);
-		ud	
 	}
 	
 	

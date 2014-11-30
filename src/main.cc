@@ -18,14 +18,10 @@ int main()
 	lcd.fillBox(0, 0, 10, 10, rand()%255, rand()%255, rand()%255);
 	
 	for (int i = 0;i < 1000; i++) {
-		for (int c = 0; c < 8; c++) {
-			int value = inst.readValue(c);
-			cout << " [" << value << "]";	
-			//lcd.fillBox(0, 5, value/4, 50, rand()%255, rand()%255, rand()%255);
-		}
+		int x = inst.readValue(0);
+		int y = inst.readValue(1);
+		lcd.fillBox(x/4, y/4, 50, 50, rand()%255, rand()%255, rand()%255);
 		cout << "\n";	
-		sleep(1);
-	
 	}
 	
 	

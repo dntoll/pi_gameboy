@@ -73,30 +73,17 @@ int main()
 
 		int vx = map(fx, 0, 1024, 230, 10);
 		int vy = map(fy, 0, 1024, 310, 10);
-		lcd.clearScreen();
+		//lcd.clearScreen();
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 		
-	} while (b > 500);
+		if (b > 500) {
+			lcd.clearScreen();
+		}
+		
+	} while (true);
 
 	lcd.clearScreen();
-	/*
-	int numValues = 0;
-	for (int i = 0; i< 1024; i++) {
-		if (values[i]) {
-			int vx = map(i, 0, 1024, 230, 10);
-			lcd.fillBox(vx, 160, 1, 1, 255, 255, 255);
-		}
-		if (values[i]) {
-			int vy = map(i, 0, 1024, 310, 10);
-			lcd.fillBox(120, vy, 1, 1, 255, 255, 255);
-		}
-		if (values[i] ) {
-			numValues++;
-			cout << i << " : " << values[i] << "\n";
-		}
-	}
-
-	cout << "\n NumValues: "  << numValues;*/
+	
 	
 	return 0;
 }

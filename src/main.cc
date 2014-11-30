@@ -17,11 +17,11 @@ int main()
 
 	lcd.fillBox(0, 0, 10, 10, rand()%255, rand()%255, rand()%255);
 	
-	for (int i = 0;i < 1000; i++) {
+	while(true) {
 		int x = inst.readValue(0);
 		int y = inst.readValue(1);
 		lcd.fillBox(x/4, y/4, 50, 50, rand()%255, rand()%255, rand()%255);
-		cout << "\n";	
+		ud	
 	}
 	
 	

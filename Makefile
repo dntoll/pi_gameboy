@@ -3,6 +3,7 @@ all: pi_gameboy
 
 pi_gameboy: src/main.o mcp3008.o ili9341.o
 	g++ src/main.o mcp3008.o ili9341.o -o pi_gameboy  -lwiringPi
+	rm *.o
 
 main.o: src/main.cc
 	g++ -c src/main.cc
@@ -16,4 +17,4 @@ ili9341.o: ../ili9341/src/ili9341.h ../ili9341/src/ili9341.cc
 
 
 clean: 
-	rm *.o mcp3008
+	rm *.o pi_gameboy

@@ -21,7 +21,7 @@ int main()
 		for (int c = 0; c < 8; c++) {
 			int value = inst.readValue(c);
 			cout << " [" << value << "]";	
-			lcd.fillBox(0, 5, value/4, 50, rand()%255, rand()%255, rand()%255);
+			//lcd.fillBox(0, 5, value/4, 50, rand()%255, rand()%255, rand()%255);
 		}
 		cout << "\n";	
 		sleep(1);

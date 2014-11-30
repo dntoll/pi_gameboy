@@ -14,6 +14,8 @@ int main()
 	lcd.clearScreen();
 
 	mcp3008 inst;
+
+	lcd.fillBox(0, 0, 10, 10, rand()%255, rand()%255, rand()%255);
 	
 	for (int i = 0;i < 1000; i++) {
 		for (int c = 0; c < 8; c++) {

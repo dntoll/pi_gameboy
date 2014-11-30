@@ -56,8 +56,8 @@ int main()
 			lcd.fillBox(vx, 160, 1, 1, 255, 255, 255);
 		}
 		if (yvalues[i]) {
-			int vy = map(i, 0, 1024, 230, 10);
-			lcd.fillBox(vy, 120, 1, 1, 255, 255, 255);
+			int vy = map(i, 0, 1024, 310, 10);
+			lcd.fillBox(120, vy, 1, 1, 255, 255, 255);
 		}
 		cout << i << " : " << xvalues[i] << " : " << yvalues[i] <<"\n";
 	}

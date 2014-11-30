@@ -84,7 +84,7 @@ int main()
 
 	lcd.clearScreen();
 	
-	FILE * pFile;
+	pFile;
 	pFile = fopen ("joystick.bin", "wb");
 	fwrite (values , sizeof(bool), sizeof(values), pFile);
 	fclose (pFile);

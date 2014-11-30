@@ -18,9 +18,10 @@ int main()
 	lcd.fillBox(0, 0, 10, 10, rand()%255, rand()%255, rand()%255);
 	
 	while(true) {
-		int x = inst.readValue(0);
-		int y = inst.readValue(1);
-		lcd.fillBox(x/4, y/4, 50, 50, rand()%255, rand()%255, rand()%255);
+		int x = 1024-inst.readValue(1);
+		int y = 1024-inst.readValue(0);
+		
+		lcd.fillBox(x/4, y/4, 3, 3, rand()%255, rand()%255, rand()%255);
 	}
 	
 	

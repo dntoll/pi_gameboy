@@ -7,6 +7,7 @@
 using namespace std;
 
 
+
 int map(int v, int fromMin, int fromMax, int toMin, int toMax) {
 	float fromRange = fromMax-fromMin;
 	float fromAt = (v-fromMin)/fromRange;
@@ -15,13 +16,34 @@ int map(int v, int fromMin, int fromMax, int toMin, int toMax) {
 	return toMin + (fromAt * toRange);
 }
 
+
+bool values[1024];
+
+float removeBlindSpot(int value) {
+	values[value] = true;
+	
+	int numValues = 0;
+	int numValuesLower = 0;
+	for (int i = 0; i< 1024; i++) {
+		if (values[i]) {
+			numValues++;
+			if ( i < value) {
+				numValuesLower++;
+			}
+		}
+	}
+	
+	
+	return (float)numValuesLower / (float)numValues;
+
+	
+}
+
 int main()
 {
-	bool xvalues[1024];
-	bool yvalues[1024];
+	
 	for (int i = 0; i< 1024; i++) {
-		xvalues[i] = false;
-		yvalues[i] = false;
+		values[i] = false;
 	}
 
 	ili9341 lcd;
@@ -34,50 +56,47 @@ int main()
 	int b;
 	
 	do {
+		//It seems that the joystick has some blind zones, jumping from one interval to another
+		//calibration collects all values that are achieved
 		bool foundNewValues = false;
 		int x = inst.readValue(1);
 		int y = inst.readValue(0);
 		b = inst.readValue(2);
 		
-		if (xvalues[x] == false) {
-			xvalues[x] = true;
+		if (values[x] == false || values[y] == false) {
+			values[x] = true;
 			foundNewValues = true;
 		}
-		if (yvalues[y] == false) {
-			yvalues[y] = true;
-			foundNewValues = true;
-		}
-
-		int vx = map(x, 0, 1024, 230, 10);
-		int vy = map(y, 0, 1024, 310, 10);
 		
-		
+		float fx = removeBlindSpot(x) * 1024.0f;
+		float fy = removeBlindSpot(y) * 1024.0f;
 
-		if (foundNewValues) {
-			lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
-			cout << x << " : " << y << " : " << b <<"\n";
-		}
+		int vx = map(fx, 0, 1024, 230, 10);
+		int vy = map(fy, 0, 1024, 310, 10);
+		
+		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
+		
 	} while (b > 500);
 
 	lcd.clearScreen();
-	
+	/*
 	int numValues = 0;
 	for (int i = 0; i< 1024; i++) {
-		if (xvalues[i]) {
+		if (values[i]) {
 			int vx = map(i, 0, 1024, 230, 10);
 			lcd.fillBox(vx, 160, 1, 1, 255, 255, 255);
 		}
-		if (yvalues[i]) {
+		if (values[i]) {
 			int vy = map(i, 0, 1024, 310, 10);
 			lcd.fillBox(120, vy, 1, 1, 255, 255, 255);
 		}
-		if (xvalues[i] || yvalues[i]) {
+		if (values[i] ) {
 			numValues++;
-			cout << i << " : " << xvalues[i] << " : " << yvalues[i] <<"\n";
+			cout << i << " : " << values[i] << "\n";
 		}
 	}
 
-	cout << "\n NumValues: "  << numValues;
+	cout << "\n NumValues: "  << numValues;*/
 	
 	return 0;
 }

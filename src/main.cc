@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../../mcp3008/mcp3008.h"
 #include "../../ili9341/src/ili9341.h"
-
+#include <stdio.h>
 
 using namespace std;
 

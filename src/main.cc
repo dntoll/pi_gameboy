@@ -12,7 +12,7 @@ int map(int v, int fromMin, int fromMax, int toMin, int toMax) {
 	float fromAt = (v-fromMin)/fromRange;
 	float toRange = toMax-toMin;
 	
-	return toMin + (fromAt * toRange)
+	return toMin + (fromAt * toRange);
 }
 
 int main()

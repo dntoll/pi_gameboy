@@ -30,8 +30,8 @@ int main()
 		int x = inst.readValue(1);
 		int y = inst.readValue(0);
 
-		int vx = map(x, 0, 1024, 240, 0);
-		int vy = map(y, 0, 1024, 320, 0);
+		int vx = map(x, 0, 1024, 230, 10);
+		int vy = map(y, 0, 1024, 310, 10);
 		
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 

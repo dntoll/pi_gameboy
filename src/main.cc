@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include "../mcp3008/mcp3008.h"
+#include "../../mcp3008/mcp3008.h"
 
 using namespace std;
 

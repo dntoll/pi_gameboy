@@ -46,7 +46,7 @@ int main()
 		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 
 		cout << x << " : " << y << "\n";
-	} while (b > 1000);
+	} while (b < 1000);
 	lcd.clearScreen();
 	
 	

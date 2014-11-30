@@ -8,7 +8,7 @@ main.o: src/main.cc
 	g++ -c src/main.cc
 
 src/mcp3008.o: ../mcp3008/mcp3008.h ../mcp3008/mcp3008.cc
-	g++ -c mcp3008.cc
+	g++ -c ../mcp3008/mcp3008.cc
 
 #ili9341: ../ili9341/src/ili9341.h ../ili9341/src/ili9341.cc
 #	g++ ../ili9341/src/ili9341.cc 

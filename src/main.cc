@@ -50,6 +50,7 @@ int main()
 
 	lcd.clearScreen();
 	
+	int numValues = 0;
 	for (int i = 0; i< 1024; i++) {
 		if (xvalues[i]) {
 			int vx = map(i, 0, 1024, 230, 10);
@@ -59,8 +60,13 @@ int main()
 			int vy = map(i, 0, 1024, 310, 10);
 			lcd.fillBox(120, vy, 1, 1, 255, 255, 255);
 		}
-		cout << i << " : " << xvalues[i] << " : " << yvalues[i] <<"\n";
+		if (xvalues[i] || yvalues[i]) {
+			numValues++;
+			cout << i << " : " << xvalues[i] << " : " << yvalues[i] <<"\n";
+		}
 	}
+
+	cout << "\n NumValues: "  << numValues;
 	
 	return 0;
 }

@@ -6,6 +6,15 @@
 
 using namespace std;
 
+
+int map(int v, int fromMin, int fromMax, int toMin, int toMax) {
+	float fromRange = fromMax-fromMin;
+	float fromAt = (v-fromMin)/fromRange;
+	float toRange = toMax-toMin;
+	
+	return toMin + (fromAt * toRange)
+}
+
 int main()
 {
 	
@@ -15,13 +24,16 @@ int main()
 
 	mcp3008 inst;
 
-	lcd.fillBox(240, 320, 10, 10, rand()%255, rand()%255, rand()%255);
+	lcd.fillBox(230, 310, 10, 10, rand()%255, rand()%255, rand()%255);
 	
 	while(true) {
-		int x = 1024-inst.readValue(1);
-		int y = 1024-inst.readValue(0);
+		int x = inst.readValue(1);
+		int y = inst.readValue(0);
+
+		int vx = map(x, 0, 1024, 240, 0);
+		int vy = map(x, 0, 1024, 240, 0);
 		
-		lcd.fillBox(x/4, y/4, 3, 3, rand()%255, rand()%255, rand()%255);
+		lcd.fillBox(vx, vy, 3, 3, rand()%255, rand()%255, rand()%255);
 	}
 	
 	

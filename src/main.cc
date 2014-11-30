@@ -45,6 +45,10 @@ int main()
 	for (int i = 0; i< 1024; i++) {
 		values[i] = false;
 	}
+	FILE * pFile;
+	pFile = fopen ("joystick.bin", "rb");
+	fread (values , sizeof(bool), sizeof(values), pFile);
+	fclose (pFile);
 
 	ili9341 lcd;
 	lcd.setBrightness(255);

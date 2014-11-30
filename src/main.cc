@@ -38,7 +38,7 @@ int main()
 		b = inst.readValue(2);
 
 		xvalues[x] = true;
-		xvalues[y] = true;
+		yvalues[y] = true;
 
 		int vx = map(x, 0, 1024, 230, 10);
 		int vy = map(y, 0, 1024, 310, 10);

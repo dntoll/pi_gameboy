@@ -12,8 +12,17 @@ void PongView::draw() {
 	int fy = stick.getY();*/
 
 	const Ball &b = model.getBall();
-	/*int vx = map(, 0, 1024, 230, 10);
-	int vy = map(fy, 0, 1024, 310, 10);
-	//lcd.clearScreen();*/
-	screen.fillBox(100, 100, 10, 10, 255, 255, 0);
+	int vx = map(b.getX() * 1024, 0, 1024, 230, 10);
+	int vy = map(b.getY() * 1024, 0, 1024, 310, 10);
+	
+	lcd.clearScreen();
+	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
+}
+
+int PongView::map(int v, int fromMin, int fromMax, int toMin, int toMax) {
+	float fromRange = fromMax-fromMin;
+	float fromAt = (v-fromMin)/fromRange;
+	float toRange = toMax-toMin;
+	
+	return toMin + (fromAt * toRange);
 }

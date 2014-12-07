@@ -8,6 +8,8 @@ class PongView {
 		PongView(const PongModel &m, ili9341 &lcd);
 		void draw();
 	private:
+		int map(int v, int fromMin, int fromMax, int toMin, int toMax);
+
 		const PongModel &model;
 		ili9341 &screen;
 };

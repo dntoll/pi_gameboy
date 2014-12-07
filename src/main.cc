@@ -10,13 +10,6 @@
 
 using namespace std;
 
-int map(int v, int fromMin, int fromMax, int toMin, int toMax) {
-	float fromRange = fromMax-fromMin;
-	float fromAt = (v-fromMin)/fromRange;
-	float toRange = toMax-toMin;
-	
-	return toMin + (fromAt * toRange);
-}
 
 int main()
 {

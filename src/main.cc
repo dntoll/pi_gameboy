@@ -4,7 +4,7 @@
 #include "../../ili9341/src/ili9341.h"
 #include <stdio.h>
 #include "joystick.h"
-#include "pong.h"
+#include "PongController.h"
 
 using namespace std;
 
@@ -22,7 +22,9 @@ int main()
 	
 	ili9341 lcd;
 
-	PongController pc;
+	PongModel pm;
+	PongView pv(pm);
+	PongController pc(pm, pv);
 
 	lcd.setBrightness(255);
 	lcd.clearScreen();

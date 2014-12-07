@@ -4,9 +4,10 @@
 
 class PongController {
 	public:
-		PongController();
+		PongController(PongModel &m, PongView &v);
 
 	private:
-		
+		PongModel &model;
+		PongView &view;
 };
 

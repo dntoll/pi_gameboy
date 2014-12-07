@@ -1,4 +1,4 @@
-#include "pong.h"
+#include "PongController.h"
 
 PongController::PongController() {
 }

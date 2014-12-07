@@ -44,7 +44,7 @@ int main()
 		//lcd.clearScreen();
 		lcd.fillBox(vx, vy, 1, 1, 255, 255, 0);
 		
-	} while (stick.buttonDown());
+	} while (stick.buttonDown() == false);
 
 	lcd.clearScreen();
 	

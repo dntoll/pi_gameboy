@@ -3,6 +3,7 @@
 #include "../../mcp3008/mcp3008.h"
 #include "../../ili9341/src/ili9341.h"
 #include <stdio.h>
+#include "joystick.h"
 
 using namespace std;
 
@@ -41,7 +42,7 @@ float removeBlindSpot(int value) {
 
 int main()
 {
-	
+	JoyStick stick;
 	for (int i = 0; i< 1024; i++) {
 		values[i] = false;
 	}

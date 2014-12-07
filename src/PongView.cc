@@ -11,7 +11,7 @@ void PongView::draw() {
 	int fx = stick.getX();
 	int fy = stick.getY();*/
 
-	const Ball &b = m.getBall();
+	const Ball &b = model.getBall();
 	/*int vx = map(, 0, 1024, 230, 10);
 	int vy = map(fy, 0, 1024, 310, 10);
 	//lcd.clearScreen();*/

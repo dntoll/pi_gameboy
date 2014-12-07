@@ -18,3 +18,4 @@ ili9341.o: ../ili9341/src/ili9341.h ../ili9341/src/ili9341.cc
 
 clean: 
 	rm *.o pi_gameboy
+	rm src/*.o

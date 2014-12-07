@@ -1,6 +1,7 @@
 #pragma once
 
-
+#include "PongModel.h"
+#include "PongView.h"
 
 class PongController {
 	public:

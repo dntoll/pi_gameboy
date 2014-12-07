@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../mcp3008/mcp3008.h"
+#include <stdio.h>
 
 
 class JoyStick {

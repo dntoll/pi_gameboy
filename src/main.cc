@@ -22,7 +22,7 @@ int main()
 	
 	ili9341 lcd;
 
-	Pong pong;
+	PongController pc;
 
 	lcd.setBrightness(255);
 	lcd.clearScreen();

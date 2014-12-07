@@ -55,12 +55,6 @@ int main()
 	lcd.setBrightness(255);
 	lcd.clearScreen();
 
-	
-
-	lcd.fillBox(230, 310, 10, 10, rand()%255, rand()%255, rand()%255);
-	int b = 0;
-	float dt = 0.01f;
-
 	getCurrentTimeElapsed(); //to remove the false values
 
 	do {

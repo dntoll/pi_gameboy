@@ -22,6 +22,17 @@ void Ball::update(float dt) {
 		y = 0.0f;
 		dy = -dy;
 	}
+
+	//roof 
+	if (x > 1.0f) {
+		x = 1.0f;
+		dx = -dx;
+	}
+	//floor
+	if (x < 0.0f) {
+		x = 0.0f;
+		dx = -dx;
+	}
 }
 
 float Ball::getX() const {

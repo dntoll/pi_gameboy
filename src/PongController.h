@@ -7,6 +7,7 @@ class PongController {
 	public:
 		PongController(PongModel &m, PongView &v);
 
+		void update();
 	private:
 		PongModel &model;
 		PongView &view;

@@ -61,11 +61,12 @@ int main()
 	int b = 0;
 	float dt = 0.01f;
 
-	getCurrentTimeElapsed();
-	
-	do {
+	getCurrentTimeElapsed(); //to remove the false values
 
-		pc.update(getCurrentTimeElapsed());
+	do {
+		float dt = getCurrentTimeElapsed();
+		pc.update(dt);
+		cout << dt << endl;
 		
 	} while (stick.buttonDown() == false);
 

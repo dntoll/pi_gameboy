@@ -6,7 +6,7 @@ all: pi_gameboy
 
 
 pi_gameboy: mcp3008.o ili9341.o $(OBJ_FILES)
-	g++ -lwiringPi src/*.o -o $@ $^ 
+	g++ -lwiringPi -o $@ $^ 
 	
 obj/%.o: src/%.cpp
 	g++ $(CC_FLAGS) -c -o $@ $<

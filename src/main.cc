@@ -4,6 +4,7 @@
 #include "../../ili9341/src/ili9341.h"
 #include <stdio.h>
 #include "joystick.h"
+#include "pong.h"
 
 using namespace std;
 
@@ -20,6 +21,9 @@ int main()
 	JoyStick stick;
 	
 	ili9341 lcd;
+
+	Pong pong;
+
 	lcd.setBrightness(255);
 	lcd.clearScreen();
 

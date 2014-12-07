@@ -33,7 +33,7 @@ int main()
 		//calibration collects all values that are achieved
 		bool foundNewValues = false;
 		int fx = stick.getX();
-		int fy = stick.getX();
+		int fy = stick.getY();
 
 		int vx = map(fx, 0, 1024, 230, 10);
 		int vy = map(fy, 0, 1024, 310, 10);

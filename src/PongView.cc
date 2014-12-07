@@ -15,7 +15,7 @@ void PongView::draw() {
 	int vx = map(b.getX() * 1024, 0, 1024, 230, 10);
 	int vy = map(b.getY() * 1024, 0, 1024, 310, 10);
 	
-	lcd.clearScreen();
+	screen.clearScreen();
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
 }
 

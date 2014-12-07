@@ -25,7 +25,7 @@ int main()
 	ili9341 lcd;
 
 	PongModel pm;
-	PongView pv(pm);
+	PongView pv(pm, lcd);
 	PongController pc(pm, pv);
 
 	lcd.setBrightness(255);

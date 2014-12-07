@@ -9,7 +9,7 @@ pi_gameboy: mcp3008.o ili9341.o $(OBJ_FILES)
 	g++ -lwiringPi src/*.o -o $@ $^ 
 	
 obj/%.o: src/%.cpp
-   g++ $(CC_FLAGS) -c -o $@ $<
+	g++ $(CC_FLAGS) -c -o $@ $<
 
 mcp3008.o: ../mcp3008/mcp3008.h ../mcp3008/mcp3008.cc
 	g++ -c ../mcp3008/mcp3008.cc

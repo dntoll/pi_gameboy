@@ -12,5 +12,7 @@ class PongView {
 
 		const PongModel &model;
 		ili9341 &screen;
+
+		int ovx, ovy;
 };
 

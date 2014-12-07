@@ -15,8 +15,10 @@ void PongView::draw() {
 	int vx = map(b.getX() * 1024, 0, 1024, 230, 10);
 	int vy = map(b.getY() * 1024, 0, 1024, 310, 10);
 	
-	screen.fillBox(vx-30, vy-30, 60, 60, 0, 0, 0);
+	screen.fillBox(ovx, ovy, 10, 10, 0, 0, 0);
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
+	ovx = vx;
+	ovy = vy;
 }
 
 int PongView::map(int v, int fromMin, int fromMax, int toMin, int toMax) {

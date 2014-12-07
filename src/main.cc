@@ -60,7 +60,7 @@ int main()
 	do {
 		float dt = getCurrentTimeElapsed();
 		pc.update(dt);
-		cout << 1.0f/dt << endl;
+		//cout << 1.0f/dt << endl;
 		
 	} while (stick.buttonDown() == false);
 

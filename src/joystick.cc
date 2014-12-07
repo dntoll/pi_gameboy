@@ -13,7 +13,7 @@ JoyStick::JoyStick() {
 
 JoyStick::~JoyStick() {
 	
-	pFile = fopen ("joystick.bin", "wb");
+	FILE *pFile = fopen ("joystick.bin", "wb");
 	fwrite (values , sizeof(bool), sizeof(values), pFile);
 	fclose (pFile);
 }

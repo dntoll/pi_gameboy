@@ -4,6 +4,8 @@
 #include "../../ili9341/src/ili9341.h"
 #include <stdio.h>
 #include "joystick.h"
+#include "PongModel.h"
+#include "PongView.h"
 #include "PongController.h"
 
 using namespace std;

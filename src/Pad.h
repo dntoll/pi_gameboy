@@ -1,15 +1,10 @@
 #pragma once
 
-#include "Pad.h";
-#include "Ball.h";
-
-class PongModel {
+class Pad {
 	public:
-		PongModel();
+		Pad();
 
 	private:
-		Pad left
-		Pad right;
-		Ball ball;
+		float position;
 };
 

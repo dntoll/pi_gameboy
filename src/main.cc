@@ -17,7 +17,10 @@
 using namespace std;
 
 
-void print_current_time_with_ms (void)
+long            last_ms; // Milliseconds
+time_t          last_s;  // Seconds
+
+float getCurrentTimeElapsed()
 {
     long            ms; // Milliseconds
     time_t          s;  // Seconds
@@ -28,8 +31,14 @@ void print_current_time_with_ms (void)
     s  = spec.tv_sec;
     ms = round(spec.tv_nsec / 1.0e6); // Convert nanoseconds to milliseconds
 
-    printf("Current time: %"PRIdMAX".%03ld seconds since the Epoch\n",
-           (intmax_t)s, ms);
+    time_t es = s-last_s;
+    long ems = ms-last_ms;
+
+    last_ms = ms;
+    last_s = s;
+
+    return (float)es + (float)ems*1000.0f;
+
 }
 
 
@@ -51,9 +60,12 @@ int main()
 	lcd.fillBox(230, 310, 10, 10, rand()%255, rand()%255, rand()%255);
 	int b = 0;
 	float dt = 0.01f;
+
+	getCurrentTimeElapsed();
+	
 	do {
 
-		pc.update(dt);
+		pc.update(getCurrentTimeElapsed());
 		
 	} while (stick.buttonDown() == false);
 

@@ -1,5 +1,5 @@
-CPP_FILES := $(wildcard src/*.cpp)
-OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cpp=.o)))
+CPP_FILES := $(wildcard src/*.cc)
+OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cc=.o)))
 
 
 all: pi_gameboy

@@ -78,7 +78,7 @@ int main()
 		int vx = map(fx, 0, 1024, 230, 10);
 		int vy = map(fy, 0, 1024, 310, 10);
 		//lcd.clearScreen();
-		lcd.fillBox(vx, vy, 1, 1, rand()%255, rand()%255, rand()%255);
+		lcd.fillBox(vx, vy, 1, 1, 255, 0, 0);
 		
 	} while (b > 500);
 

@@ -39,6 +39,10 @@ int JoyStick::getY() {
 	return removeBlindSpot(x) * 1024.0f;
 }
 
+bool JoyStick::buttonDown() {
+	return inst.readValue(2) > 500;
+}
+
 float JoyStick::removeBlindSpot(int value) {
 	values[value] = true;
 	

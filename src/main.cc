@@ -40,7 +40,7 @@ int main()
 		//lcd.clearScreen();
 		lcd.fillBox(vx, vy, 1, 1, 255, 255, 0);
 		
-	} while (b > 500);
+	} while (stick.buttonDown());
 
 	lcd.clearScreen();
 	

@@ -11,7 +11,7 @@ class JoyStick {
 
 		int getX();
 		int getY();
-
+		bool buttonDown();
 	private:
 
 		int map(int v, int fromMin, int fromMax, int toMin, int toMax);

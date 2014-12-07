@@ -1,5 +1,5 @@
 #include "PongView.h"
 
-PongView::PongView(const PongModel &m) {
-	model = m;
+PongView::PongView(const PongModel &m) : model(m){
+	
 }

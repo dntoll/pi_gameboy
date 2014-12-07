@@ -1,6 +1,6 @@
 #include "PongController.h"
 
-PongController::PongController(PongModel &m, PongView &v) {
-	this->model = m;
-	this->view = v;
+PongController::PongController(PongModel &m, PongView &v) : model(m), view(v) {
+	
+	
 }

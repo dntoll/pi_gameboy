@@ -40,7 +40,7 @@ int JoyStick::getY() {
 }
 
 bool JoyStick::buttonDown() {
-	return inst.readValue(2) > 500;
+	return inst.readValue(2) < 500;
 }
 
 float JoyStick::removeBlindSpot(int value) {

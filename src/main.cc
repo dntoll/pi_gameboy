@@ -37,7 +37,7 @@ float getCurrentTimeElapsed()
     last_ms = ms;
     last_s = s;
 
-    return (float)es + (float)ems*1000.0f;
+    return (float)es + (float)ems/1000.0f;
 
 }
 

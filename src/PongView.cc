@@ -25,9 +25,9 @@ void PongView::draw() {
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
 	ovx = vx;
 	ovy = vy;
-	cout << "screeb flush" << endl;
+	cout << "screen flush" << endl;
 	screen.flush();
-	cout << "screeb flushed" << endl;
+	cout << "screen flushed" << endl;
 }
 
 int PongView::map(int v, int fromMin, int fromMax, int toMin, int toMax) {

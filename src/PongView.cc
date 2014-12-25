@@ -11,7 +11,7 @@ PongView::PongView(const PongModel &m, ili9341 &lcd) : model(m), screen(lcd) {
 void PongView::draw() {
 	//It seems that the joystick has some blind zones, jumping from one interval to another
 		//calibration collects all values that are achieved
-	std::cout << "frame draw" << endl;
+	std::cout << "frame draw" << std::endl;
 	screen.clearScreen();
 	/*bool foundNewValues = false;
 	int fx = stick.getX();

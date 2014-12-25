@@ -11,7 +11,6 @@
 
 #include <inttypes.h>
 #include <math.h>
-#include <stdio.h>
 #include <time.h>
 
 using namespace std;
@@ -51,7 +50,7 @@ int main()
 	PongModel pm;
 	PongView pv(pm, lcd);
 	PongController pc(pm, pv, stick);
-
+	cout << "startup" << endl;
 
 	lcd.setBrightness(255);
 	lcd.clearScreen();
@@ -59,6 +58,7 @@ int main()
 	getCurrentTimeElapsed(); //to remove the false values
 
 	do {
+		cout << "frame start" << endl;
 		float dt = getCurrentTimeElapsed();
 		pc.update(dt);
 		cout << 1.0f/dt << endl;

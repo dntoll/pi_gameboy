@@ -20,7 +20,7 @@ void PongView::draw() {
 	const Ball &b = model.getBall();
 	int vx = map(b.getX() * 1024, 0, 1024, 230, 10);
 	int vy = map(b.getY() * 1024, 0, 1024, 310, 10);
-	cout << "fill box" << endl;
+	cout << "fill box " << ovx << " " << ovy << endl;
 	screen.fillBox(ovx, ovy, 10, 10, 0, 0, 0);
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
 	ovx = vx;

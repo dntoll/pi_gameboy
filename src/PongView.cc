@@ -32,7 +32,7 @@ void PongView::draw() {
 	screen.fillBox(310, 0, 10, 240, 255, 255, 255);
 
 	//Ball
-	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
+	screen.fillBox(vx, vy, 100, 100, 255, 255, 0);
 	ovx = vx;
 	ovy = vy;
 	cout << vx << " " <<  vy << endl;

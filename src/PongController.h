@@ -5,11 +5,12 @@
 
 class PongController {
 	public:
-		PongController(PongModel &m, PongView &v);
+		PongController(PongModel &m, PongView &v, JoyStick &j);
 
 		void update(float dt);
 	private:
 		PongModel &model;
 		PongView &view;
+		JoyStick &joyStick;
 };
 

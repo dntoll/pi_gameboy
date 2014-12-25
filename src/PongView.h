@@ -6,13 +6,17 @@
 class PongView {
 	public:
 		PongView(const PongModel &m, ili9341 &lcd);
+
 		void draw();
+
 	private:
+
 		int map(int v, int fromMin, int fromMax, int toMin, int toMax);
 
 		const PongModel &model;
-		ili9341 &screen;
 
+		ili9341 &screen;
+		//old x old y to avoid redrawing the screen
 		int ovx, ovy;
 };
 

@@ -13,8 +13,6 @@ class JoyStick {
 		int getY();
 		bool buttonDown();
 	private:
-
-		int map(int v, int fromMin, int fromMax, int toMin, int toMax);
 		float removeBlindSpot(int value);
 		//Some input values are missing so this buffer contains the working values	
 		bool values[1024];

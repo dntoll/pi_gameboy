@@ -19,8 +19,14 @@ void PongView::draw() {
 	int fy = stick.getY();*/
 
 	const Ball &b = model.getBall();
-	int vx = map(b.getX() * 1024, 0, 1024, 230, 10);
-	int vy = map(b.getY() * 1024, 0, 1024, 310, 10);
+	int vx = map(b.getX() * 1024, 0, 1024, 310, 10);
+	int vy = map(b.getY() * 1024, 0, 1024, 230, 10);
+	screen.fillBox(0, 0, 320, 10, 255, 255, 255);
+	screen.fillBox(0, 230, 320, 10, 255, 255, 255);
+	screen.fillBox(0, 0, 10, 240, 255, 255, 255);
+	screen.fillBox(230, 0, 10, 240, 255, 255, 255);
+
+
 	//cout << "fill box " << ovx << " " << ovy << endl;
 	screen.fillBox(ovx, ovy, 10, 10, 0, 0, 0);
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);

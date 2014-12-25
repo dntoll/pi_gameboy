@@ -4,8 +4,8 @@
 Ball::Ball() {
 	x = 0.5f;
 	y = 0.5f;
-	dx = 0.1f;
-	dy = 0.2f;
+	dx = 0.3f;
+	dy = 0.5f;
 }
 
 void Ball::update(float dt) {

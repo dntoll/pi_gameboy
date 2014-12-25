@@ -5,7 +5,8 @@
 using namespace std;
 
 PongView::PongView(const PongModel &m, ili9341 &lcd) : model(m), screen(lcd) {
-	
+	ovx = 0;
+	ovy = 0;
 }
 
 void PongView::draw() {

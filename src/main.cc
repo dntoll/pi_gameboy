@@ -50,7 +50,8 @@ int main()
 
 	PongModel pm;
 	PongView pv(pm, lcd);
-	PongController pc(pm, pv);
+	PongController pc(pm, pv, stick);
+
 
 	lcd.setBrightness(255);
 	lcd.clearScreen();

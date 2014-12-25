@@ -58,12 +58,12 @@ int main()
 	getCurrentTimeElapsed(); //to remove the false values
 
 	do {
-		cout << "frame start" << endl;
+		//cout << "frame start" << endl;
 		float dt = getCurrentTimeElapsed();
 
-		cout << "controller update" << endl;
+		//cout << "controller update" << endl;
 		pc.update(dt);
-		cout << 1.0f/dt << endl;
+		//cout << 1.0f/dt << endl;
 		
 	} while (stick.buttonDown() == false);
 

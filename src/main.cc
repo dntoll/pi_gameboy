@@ -63,7 +63,7 @@ int main()
 
 		//cout << "controller update" << endl;
 		pc.update(dt);
-		//cout << 1.0f/dt << endl;
+		cout << 1.0f/dt << endl;
 		
 	} while (stick.buttonDown() == false);
 

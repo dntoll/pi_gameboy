@@ -24,8 +24,8 @@ void PongView::draw() {
 	//old ball
 	screen.fillBox(ovx, ovy, 10, 10, 0, 0, 0);
 
-	int vx = map(b.getX() * 1024, 0, 1024, 310, 10);
-	int vy = map(b.getY() * 1024, 0, 1024, 230, 10);
+	int vx = map(b.getX() * 1024, 0, 1024, 300, 10);
+	int vy = map(b.getY() * 1024, 0, 1024, 220, 10);
 	screen.fillBox(0, 0, 320, 10, 255, 255, 255);
 	screen.fillBox(0, 230, 320, 10, 255, 255, 255);
 	screen.fillBox(0, 0, 10, 240, 255, 255, 255);

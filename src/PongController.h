@@ -2,6 +2,7 @@
 
 #include "PongModel.h"
 #include "PongView.h"
+#include "joystick.h"
 
 class PongController {
 	public:

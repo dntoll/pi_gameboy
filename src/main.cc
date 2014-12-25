@@ -60,6 +60,8 @@ int main()
 	do {
 		cout << "frame start" << endl;
 		float dt = getCurrentTimeElapsed();
+
+		cout << "controller update" << endl;
 		pc.update(dt);
 		cout << 1.0f/dt << endl;
 		

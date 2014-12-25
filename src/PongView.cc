@@ -35,7 +35,7 @@ void PongView::draw() {
 	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
 	ovx = vx;
 	ovy = vy;
-	cout << vx << " " <<  vy << endl;
+	//cout << vx << " " <<  vy << endl;
 	screen.flush();
 	//cout << "screen flushed" << endl;
 }

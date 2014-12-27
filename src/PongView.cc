@@ -21,17 +21,17 @@ void PongView::draw() {
 
 	const Ball &b = model.getBall();
 	//old ball
-	screen.fillBox(ovx-1, ovy-1, 12, 12, 0, 0, 0);
+	screen.fillBox(Rect(ovx-1, ovy-1, 12, 12), Color::BLACK);
 
 	int vx = map(b.getX() * 1024, 0, 1024, 300, 10);
 	int vy = map(b.getY() * 1024, 0, 1024, 220, 10);
-	screen.fillBox(0, 0, 320, 10, 255, 0, 0);
-	screen.fillBox(0, 230, 320, 10, 255, 0, 0);
-	screen.fillBox(0, 0, 10, 240, 0, 255, 0);
-	screen.fillBox(310, 0, 10, 240, 255, 0, 255);
+	screen.fillBox(Rect(0, 0, 320, 10), Color(255, 0, 0));
+	screen.fillBox(Rect(0, 230, 320, 10), Color(255, 0, 0));
+	screen.fillBox(Rect(0, 0, 10, 240), 0, Color(255, 0));
+	screen.fillBox(Rect(310, 0, 10, 240), Color(255, 0, 255));
 
 	//Ball
-	screen.fillBox(vx, vy, 10, 10, 255, 255, 0);
+	screen.fillBox(Rect(vx, vy, 10, 10), Color(255, 255, 0));
 	ovx = vx;
 	ovy = vy;
 	screen.flush();

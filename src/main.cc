@@ -48,7 +48,7 @@ int main()
 	JoyStick stick;
 	
 	ili9341 lcd;
-	BackBuffer bb(lcd)
+	BackBuffer bb(lcd);
 
 	PongModel pm;
 	PongView pv(pm, bb);

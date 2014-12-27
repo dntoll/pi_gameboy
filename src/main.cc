@@ -56,7 +56,7 @@ int main()
 	cout << "startup" << endl;
 
 	lcd.setBrightness(255);
-	lcd.clearScreen();
+	bb.clearScreen();
 
 	getCurrentTimeElapsed(); //to remove the false values
 
@@ -70,7 +70,7 @@ int main()
 		
 	} while (stick.buttonDown() == false);
 
-	lcd.clearScreen();
+	bb.clearScreen();
 	
 	
 	

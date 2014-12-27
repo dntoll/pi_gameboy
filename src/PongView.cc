@@ -27,7 +27,7 @@ void PongView::draw() {
 	int vy = map(b.getY() * 1024, 0, 1024, 220, 10);
 	screen.fillBox(Rect(0, 0, 320, 10), Color(255, 0, 0));
 	screen.fillBox(Rect(0, 230, 320, 10), Color(255, 0, 0));
-	screen.fillBox(Rect(0, 0, 10, 240), 0, Color(255, 0));
+	screen.fillBox(Rect(0, 0, 10, 240), Color(0, 255, 0));
 	screen.fillBox(Rect(310, 0, 10, 240), Color(255, 0, 255));
 
 	//Ball

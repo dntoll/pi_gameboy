@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../ili9341/src/ili9341.h"
+#include "../../ili9341/src/BackBuffer.h"
 #include "PongModel.h"
 
 class PongView {
 	public:
-		PongView(const PongModel &m, ili9341 &lcd);
+		PongView(const PongModel &m, BackBuffer &lcd);
 
 		void draw();
 
@@ -15,7 +15,7 @@ class PongView {
 
 		const PongModel &model;
 
-		ili9341 &screen;
+		BackBuffer &screen;
 		//old x old y to avoid redrawing the screen
 		int ovx, ovy;
 };

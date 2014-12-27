@@ -46,9 +46,10 @@ int main()
 	JoyStick stick;
 	
 	ili9341 lcd;
+	BackBuffer bb(lcd)
 
 	PongModel pm;
-	PongView pv(pm, lcd);
+	PongView pv(pm, bb);
 	PongController pc(pm, pv, stick);
 	cout << "startup" << endl;
 

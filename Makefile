@@ -1,7 +1,7 @@
 CPP_FILES := $(wildcard src/*.cc)
 OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cc=.o)))
 ILICPP_FILES := $(wildcard ../ili9341/src/*.cc)
-ILIOBJ_FILES := $(addprefix ../ili9341/obj/,$(notdir $(CPP_FILES:.cc=.o)))
+ILIOBJ_FILES := $(addprefix ../ili9341/obj/,$(notdir $(ILICPP_FILES:.cc=.o)))
 
 all: pi_gameboy
 

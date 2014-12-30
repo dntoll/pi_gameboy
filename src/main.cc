@@ -71,7 +71,7 @@ int main()
 	} while (stick.buttonDown() == false);
 
 	bb.clearScreen();
-	
+	lcd.setBrightness(0);
 	
 	
 	return 0;

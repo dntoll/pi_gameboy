@@ -10,3 +10,9 @@ ili9341
  * SCE  = 10;// # gpio pin 24 = wiringpi no. 10 (CE0 BCM 8) 
  * SCLK = 14;// # gpio pin 23 = wiringpi no. 14 (SCLK BCM 11)
  * DIN  = 12;// # gpio pin 19 = wiringpi no. 12 (MOSI BCM 10)
+
+mpc3008
+=======
+ * x = 1
+ * y = 0
+ * Button = 2

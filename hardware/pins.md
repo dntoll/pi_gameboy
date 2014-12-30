@@ -19,6 +19,6 @@ mpc3008
    * SCLK = 14;// # gpio pin 23 = wiringpi no. 14 (SCLK BCM 11)
    * DIN  = 12;// # gpio pin 19 = wiringpi no. 12 (MOSI BCM 10)
  * MCP3008 index
- * x = 1
- * y = 0
- * Button = 2
+  * x = 1
+  * y = 0
+  * Button = 2

@@ -13,6 +13,10 @@ ili9341
 
 mpc3008
 =======
+ * SPI Channel 1.
+ * SCE = 11
+ * SCLK = 14;// # gpio pin 23 = wiringpi no. 14 (SCLK BCM 11)
+ * DIN  = 12;// # gpio pin 19 = wiringpi no. 12 (MOSI BCM 10)
  * x = 1
  * y = 0
  * Button = 2

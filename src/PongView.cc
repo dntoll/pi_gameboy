@@ -21,6 +21,7 @@ void PongView::draw() {
 
 	const Ball &b = model.getBall();
 	//old ball
+	screen.clearScreen();
 	screen.fillBox(Rect(ovx-1, ovy-1, 12, 12), Color::BLACK);
 
 	int vx = map(b.getX() * 1024, 0, 1024, 300, 10);

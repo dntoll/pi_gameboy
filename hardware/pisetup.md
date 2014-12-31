@@ -46,5 +46,31 @@ Configure pi
  
 Samba setup
 -----------
-
+Most is taken from:
 http://raspberrywebserver.com/serveradmin/share-your-raspberry-pis-files-and-folders-across-a-network.html
+
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install samba samba-common-bin
+    sudo nano /etc/samba/smb.conf
+    
+Add the following to smb.conf
+
+    [pihome]
+    comment= Pi Home
+    path=/home/pi
+    browseable=Yes
+    writeable=Yes
+    only guest=no
+    create mask=0777
+    directory mask=0777
+    public=no
+    
+Set a new samba pw
+
+    sudo smbpasswd -a pi
+    sudo service samba restart
+    
+Mount the pihome to local filesystem
+------------------------------------
+I did this in the filebrowser on mint

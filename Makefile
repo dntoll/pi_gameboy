@@ -26,9 +26,7 @@ clean:
 	rm src/*.o
 
 reload:
-	cd ../ili9341/
-	git pull
-	cd ../pi_gameboy
+	../ili9341/make reload
 	git pull
 	make
 	sudo ./pi_gameboy

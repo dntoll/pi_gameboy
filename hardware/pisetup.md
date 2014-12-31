@@ -74,3 +74,18 @@ Set a new samba pw
 Mount the pihome to local filesystem
 ------------------------------------
 I did this in the filebrowser on mint
+
+Clone the repos
+---------------
+
+    git clone https://github.com/dntoll/pi_gameboy.git
+    git clone https://github.com/dntoll/ili9341.git
+    git clone https://github.com/dntoll/mcp3008.git
+    
+Install wiringPi
+----------------
+
+    git clone git://git.drogon.net/wiringPi
+    cd wiringPi
+    ./build
+    gpio load spi
